@@ -49,6 +49,15 @@ como isobandas coloridas, com legenda dinâmica, séries temporais
 | Frontend | JavaScript · Leaflet · Turf.js · Chart.js |
 | Dados | Cloud Optimized GeoTIFF (COG), reanálise CERRA |
 
+## Equipa de agentes (Claude Code)
+
+O desenvolvimento foi estruturado com uma equipa de 7 subagentes
+especializados (Claude Code), cada um focado numa área concreta do
+projeto — backend/API, frontend WebGIS, dados espaciais (GDAL/rasterio),
+metodologia climatológica, revisão de código e validação funcional —
+orquestrados segundo regras próprias que decidem, consoante o tipo de
+tarefa, quais especialistas participam e em que ordem.
+
 ## Autor
 
 Daniel Rodrigues
