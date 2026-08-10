@@ -8,6 +8,17 @@ entre 2001 e 2025, a partir dos dados de reanálise **CERRA**
 > Este repositório é uma apresentação pública do projeto — não contém
 > o código-fonte, que é mantido num repositório privado.
 
+## Capturas de ecrã
+
+**Ondas de calor — número de eventos, região Norte**
+![Ondas de calor, região Norte](images/heat-norte.png)
+
+**Ondas de frio — duração máxima, Grande Lisboa**
+![Ondas de frio, Grande Lisboa](images/cold-lisboa.png)
+
+**Ondas de calor — intensidade total, Alentejo**
+![Ondas de calor, Alentejo](images/heat-alentejo.png)
+
 ## O que é
 
 Permite selecionar uma região (NUTS II), uma metodologia de deteção,
