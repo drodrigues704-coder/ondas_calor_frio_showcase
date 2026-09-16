@@ -1,12 +1,17 @@
 # Ondas de Calor e Frio — WebApp (Showcase)
 
+**[Ver a demo ao vivo →](https://drodrigues704-coder.github.io/ondas_calor_frio_app/)**
+
 WebApp WebGIS para visualização de indicadores climáticos relacionados
 com **ondas de calor** e **ondas de frio** em Portugal Continental,
 entre 2001 e 2025, a partir dos dados de reanálise **CERRA**
 (Copernicus).
 
-> Este repositório é uma apresentação pública do projeto — não contém
-> o código-fonte, que é mantido num repositório privado.
+> Este repositório é uma apresentação pública do projeto (capturas de
+> ecrã, metodologia, stack) — não contém código. A demo ao vivo acima
+> corre a app real (sem backend, dados por região pré-calculados); o
+> código-fonte completo, o pipeline de dados e o histórico de
+> desenvolvimento mantêm-se num repositório privado.
 
 ## Capturas de ecrã
 
@@ -39,15 +44,35 @@ como isobandas coloridas, com legenda dinâmica, séries temporais
   isolinhas, com legenda em gradiente contínuo.
 - **Séries temporais** — evolução regional e no ponto clicado no mapa.
 - **Basemaps alternativos** (escuro / claro / rua / híbrido).
-- **Download do GeoTIFF** atualmente representado.
+- **Layout responsivo** — mapa, controlos e gráficos adaptados a ecrã de
+  telemóvel, incluindo suporte a toque e a orientação do ecrã.
+
+Na demo pública, o botão de download do GeoTIFF fica visível mas
+desativado — é intencionalmente uma versão só de visualização.
+
+## Arquitetura
+
+```mermaid
+flowchart LR
+    A[Reanálise CERRA<br/>Copernicus] --> B[Pipeline de indicadores<br/>privado]
+    B --> C[Cloud Optimized GeoTIFF]
+    C --> D[Backend FastAPI<br/>catalog.json]
+    D -->|HTTP| E[Frontend Leaflet<br/>isobandas + séries temporais]
+    C -.dados pré-calculados<br/>por região.-> F[Demo estática<br/>GitHub Pages]
+```
+
+O backend nunca faz cálculo climatológico — só resolve, no
+`catalog.json`, qual ficheiro servir para cada combinação de
+metodologia/evento/variável/região/ano. A demo pública (GitHub Pages)
+não tem backend: usa um recorte pré-calculado dos mesmos dados.
 
 ## Stack tecnológico
 
 | Camada | Tecnologia |
 |---|---|
-| Backend | Python · FastAPI · rasterio · GDAL · geopandas |
-| Frontend | JavaScript · Leaflet · Turf.js · Chart.js |
-| Dados | Cloud Optimized GeoTIFF (COG), reanálise CERRA |
+| Pipeline de indicadores + backend (privados) | Python · FastAPI · rasterio · GDAL · geopandas |
+| Frontend (demo pública) | JavaScript vanilla · Leaflet · Turf.js (isobandas) · Chart.js |
+| Dados | Cloud Optimized GeoTIFF (COG), reanálise CERRA, CRS EPSG:3857 |
 
 ## Equipa de agentes (Claude Code)
 
@@ -64,4 +89,12 @@ Daniel Rodrigues
 
 ---
 
-Interessado em ver uma demonstração? Contacta-me.
+Para uma proposta de serviço de monitorização climática para outra
+região, ou esclarecimentos sobre a metodologia, contactar:
+**Daniel Rodrigues** — drodrigues704@gmail.com · 963 240 494
+
+© Daniel Rodrigues. Todos os direitos reservados — condições completas
+em [LICENSE.md](LICENSE.md). Este conteúdo é disponibilizado para fins
+de demonstração e avaliação de competências — não inclui licença de
+uso, reprodução ou exploração comercial da metodologia, código ou
+dados subjacentes.
