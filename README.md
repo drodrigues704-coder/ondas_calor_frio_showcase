@@ -21,8 +21,10 @@ entre 1991 e 2025, a partir dos dados de reanálise **CERRA**
 **Ondas de frio (OMM) — intensidade máxima em 1998, Grande Lisboa**
 ![Ondas de frio, Grande Lisboa](images/cold-lisboa.png)
 
-Nos gráficos, a falha em 2002 é intencional: nesse ano não houve
-ondas de frio OMM, por isso a intensidade não existe (não é zero).
+A intensidade máxima só existe onde houve ondas: as zonas a
+cinzento-esverdeado não tiveram ondas de frio nesse ano, e nos gráficos
+os anos sem ondas aparecem como falhas — a intensidade não existe, não
+é zero. A água excluída (estuário do Tejo) fica sem cor.
 
 **Ondas de calor (Percentis) — intensidade total, máximo de longo prazo, Alentejo**
 ![Ondas de calor, Alentejo](images/heat-alentejo.png)
@@ -49,6 +51,8 @@ como isobandas coloridas, com legenda dinâmica e séries temporais
 - **Renderização por isobandas** — áreas vetoriais suaves entre
   isolinhas, com legenda em gradiente contínuo.
 - **Séries temporais** — evolução regional e no ponto clicado no mapa.
+- **"Sem ondas" distinto de zero** — onde não houve ondas, a
+  intensidade máxima aparece numa cor neutra própria, e não como zero.
 - **Basemaps alternativos** (escuro / claro / rua / híbrido).
 - **Layout responsivo** — mapa, controlos e gráficos adaptados a ecrã de
   telemóvel, incluindo suporte a toque e a orientação do ecrã.
