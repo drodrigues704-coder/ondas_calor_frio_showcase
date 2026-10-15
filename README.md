@@ -4,7 +4,7 @@
 
 WebApp WebGIS para visualização de indicadores climáticos relacionados
 com **ondas de calor** e **ondas de frio** em Portugal Continental,
-entre 2001 e 2025, a partir dos dados de reanálise **CERRA**
+entre 1991 e 2025, a partir dos dados de reanálise **CERRA**
 (Copernicus).
 
 > Este repositório é uma apresentação pública do projeto (capturas de
@@ -28,15 +28,18 @@ entre 2001 e 2025, a partir dos dados de reanálise **CERRA**
 
 Permite selecionar uma região (NUTS II), uma metodologia de deteção,
 um evento, uma variável e um ano, e visualizar o resultado no mapa
-como isobandas coloridas, com legenda dinâmica, séries temporais
-(regional e por ponto clicado) e download do GeoTIFF correspondente.
+como isobandas coloridas, com legenda dinâmica e séries temporais
+(regional e por ponto clicado).
 
 ## Funcionalidades
 
-- **Duas metodologias de deteção**, selecionáveis em tempo real:
-  - **OMM** — limiares fixos, segundo a Organização Meteorológica Mundial.
-  - **Percentis** — limiares por percentil (P90 calor / P10 frio) da
-    climatologia local de cada célula.
+- **Duas metodologias de deteção**, selecionáveis em tempo real — em
+  ambas, uma onda é um período de pelo menos 6 dias consecutivos:
+  - **OMM** — temperatura máxima (mínima) mais de 5 °C acima (abaixo)
+    do valor normal para esse dia do ano.
+  - **Percentis** — temperatura máxima acima do P90 (mínima abaixo do
+    P10) da climatologia local de cada célula para esse dia do ano.
+  - Período de referência da climatologia: **1991–2020**.
 - **Seleção por região (NUTS II)**.
 - **Cinco variáveis por evento**: número de eventos, dias em evento,
   duração máxima, intensidade máxima e intensidade total.
