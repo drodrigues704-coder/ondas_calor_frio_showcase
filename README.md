@@ -15,13 +15,16 @@ entre 1991 e 2025, a partir dos dados de reanálise **CERRA**
 
 ## Capturas de ecrã
 
-**Ondas de calor — número de eventos, região Norte**
+**Ondas de calor (OMM) — número de eventos, média de longo prazo, região Norte**
 ![Ondas de calor, região Norte](images/heat-norte.png)
 
-**Ondas de frio — duração máxima, Grande Lisboa**
+**Ondas de frio (OMM) — intensidade máxima em 1998, Grande Lisboa**
 ![Ondas de frio, Grande Lisboa](images/cold-lisboa.png)
 
-**Ondas de calor — intensidade total, Alentejo**
+Nos gráficos, a falha em 2002 é intencional: nesse ano não houve
+ondas de frio OMM, por isso a intensidade não existe (não é zero).
+
+**Ondas de calor (Percentis) — intensidade total, máximo de longo prazo, Alentejo**
 ![Ondas de calor, Alentejo](images/heat-alentejo.png)
 
 ## O que é
